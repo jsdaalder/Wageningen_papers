@@ -15,7 +15,7 @@ Then comes the next step: there's a lot of duplicates. Take for example these or
 
 To combine all these, we run **matching_funders_v2.py**. Main ingredient: the Dedupe library, which uses a whiff of machine learning and some manual labeling.  
 
-The last step is to do the analysis. First question: is the WUR funded mostly by governments, ngo’s or companies? For this we run the code in count_funders.py. It uses the OpenAI API to guess what kind of organisation we are dealing with. 
+The last step is to do the analysis. First question: is the WUR funded mostly by governments, ngo’s or companies? For this we run the code in **count_funders.py**. It uses the OpenAI API to guess what kind of organisation we are dealing with. 
 
 Some other questions, for which I haven't written any code:
 1. Did the share of business-funded research increase over the yers?
