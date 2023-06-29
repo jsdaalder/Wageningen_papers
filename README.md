@@ -1,6 +1,6 @@
 # Wageningen_papers
 
-These are three parts of code for an investigation in the links between the agro-industry and Wageningen University & Research (WUR).
+These are three parts of code for an investigation for [Follow the Money](ftm.nl) in the links between the agro-industry and Wageningen University & Research (WUR).
 
 The first step was to download all [~60.000 papers created by WUR in the last 25 years through Lens.org](https://www.lens.org/lens/search/scholar/table?q=author.affiliation.name:(%22Wageningen%20University%22)&p=0&n=50&s=date_published&d=%2B&f=false&e=false&l=en&authorField=author&dateFilterField=publishedYear&orderBy=%2Bdate_published&presentation=false&preview=true&stemmed=true&useAuthorId=false&publishedYear.from=1998&publishedYear.to=2023)
 
