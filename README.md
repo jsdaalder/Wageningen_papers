@@ -6,7 +6,7 @@ The first step was to download all [~60.000 papers created by WUR in the last 25
 
 I have also [uploaded this csv on Google Drive]([url](https://drive.google.com/file/d/1ujoM5gaTv-pLe3fPouo4wrDVRf_8uRuf/view?usp=sharing)). 
 
-The data (a 133.1 MB csv) is very dirty however. To clean it up, we first run **checking_duplicates_in_cells_NER.py**. It uses Named-entity recognition (with the spacy library), for both Dutch and English. There's still an unfixed bug with papers that have multiple funders (a new row for every funder should be created, but for some reason a new column is created). 
+The data (a 133.1 MB csv) is very dirty however. To clean it up, we first run [**checking_duplicates_in_cells_NER.py**]([url](https://github.com/jsdaalder/Wageningen_papers/blob/main/checking_duplicates_in_cells_NER.py)). It uses Named-entity recognition (with the spacy library), for both Dutch and English. There's still an unfixed bug with papers that have multiple funders (a new row for every funder should be created, but for some reason a new column is created). 
 
 Then comes the next step: there's a lot of duplicates. Take for example these organisations:
 1. Dutch ministry of LNV
@@ -15,9 +15,9 @@ Then comes the next step: there's a lot of duplicates. Take for example these or
 4. Ministerie van Landbouw, Natuur & Voedselkwaliteit
 5. etc.
 
-To combine all these, we run **matching_funders_v2.py**. Main ingredient: the Dedupe library, which uses a whiff of machine learning and some manual labeling.  
+To combine all these, we run [**matching_funders_v2.py**]([url](https://github.com/jsdaalder/Wageningen_papers/blob/main/matching_funders_v2.py)). Main ingredient: the Dedupe library, which uses a whiff of machine learning and some manual labeling.  
 
-The last step is to do the analysis. First question: is the WUR funded mostly by governments, ngo’s or companies? For this we run the code in **count_funders.py**. It uses the OpenAI API to guess what kind of organisation we are dealing with. 
+The last step is to do the analysis. First question: is the WUR funded mostly by governments, ngo’s or companies? For this we run the code in [**funding_analysis.py**]([url](https://github.com/jsdaalder/Wageningen_papers/blob/main/funding_analysis.py)). It uses the OpenAI API to guess what kind of organisation we are dealing with. I have deleted by private OpenAI API-key, you need to fill that in manually.
 
 Some other questions, for which I haven't written any code:
 1. Did the share of business-funded research increase over the yers?
