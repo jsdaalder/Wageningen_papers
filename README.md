@@ -17,7 +17,7 @@ Then comes the next step: there's a lot of duplicates. Take for example these or
 
 To combine all these, we run [**matching_funders_v2.py**](https://github.com/jsdaalder/Wageningen_papers/blob/main/matching_funders_v2.py). Main ingredient: the Dedupe library, which uses a whiff of machine learning and some manual labeling.  
 
-The last step is to do the analysis. First question: is the WUR funded mostly by governments, ngo’s or companies? For this we run the code in [**funding_analysis.py**](https://github.com/jsdaalder/Wageningen_papers/blob/main/funding_analysis.py). It uses the OpenAI API to guess what kind of organisation we are dealing with. I have deleted by private OpenAI API-key, you need to fill that in manually.
+The last step is to do the analysis. First question: is the WUR funded mostly by governments, ngo’s or companies? For this we run the code in [**funding_analysis.py**](https://github.com/jsdaalder/Wageningen_papers/blob/main/funding_analysis.py). It uses the OpenAI API to guess what kind of organisation we are dealing with. I have deleted by private OpenAI API-key, you need to fill that in manually. This bit of code is incomplete, there should be a bit of visualisation involved.
 
 Some other questions, for which I haven't written any code:
 1. Did the share of business-funded research increase over the yers?
