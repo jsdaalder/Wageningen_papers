@@ -42,16 +42,22 @@ def extract_orgs(funding_info):
 # Extract organizations and assign them to the 'Funding_NER' column
 df['Funding_NER'] = df['Funding'].apply(extract_orgs)
 
+print(df.sample(20))
+
 # Explode the 'Funding_NER' column
-df = df.explode('Funding_NER')
+# df = df.explode('Funding_NER')
+
+exploded = df[["Lens ID","Funding_NER"]].set_index("Lens ID")["Funding_NER"].explode().reset_index().drop_duplicates()
+
+merged = pd.merge(left=df, right=exploded, on="Lens ID")
 
 # Save the updated DataFrame to a new CSV file
-df.to_csv('Wageningen-1995-2023-papers-export_NER.csv', index=False)
+merged.to_csv('Wageningen-1995-2023-papers-export_NER.csv', index=False)
 
 print('Succesfully exported to Wageningen-1995-2023-papers-export_NER.csv')
 
 # Create a new DataFrame with only the necessary columns and save it to a new CSV file
-result_df = df[['Lens ID', 'Title', 'Funding', 'Funding_NER']]
+result_df = merged[['Lens ID', 'Title', 'Funding', 'Funding_NER']]
 result_df.to_csv('Wageningen-papers-export_filtered_NER.csv', index=False)
 
 print('Succesfully exported to Wageningen-papers-export_filtered_NER.csv')
